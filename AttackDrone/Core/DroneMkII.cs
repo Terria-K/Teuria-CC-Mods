@@ -30,6 +30,11 @@ internal sealed class DroneMkII : Artifact
 
     public override int ModifyBaseDamage(int baseDamage, Card? card, State state, Combat? combat, bool fromPlayer)
     {
+        if (!fromPlayer)
+        {
+            return 0;
+        }
+
         return 1;
     }
 
